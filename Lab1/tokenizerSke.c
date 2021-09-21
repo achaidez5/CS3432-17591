@@ -46,6 +46,7 @@ int count_tokens(char* str){
     str = end_word(str);
     while(delim_character(*str) == 1){
         count++;
+        printf("%s\n", str);
         str = word_start(str);
         str = end_word(str);
     }
@@ -107,6 +108,7 @@ void print_all_tokens(char** tokens, int count){
 int main(void){
     char buf[MAX];
     printf("Please enter input string:\n");
+    printf("$");
 
     fgets(buf, MAX, stdin);
     
